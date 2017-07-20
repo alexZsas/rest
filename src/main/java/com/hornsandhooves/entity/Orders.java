@@ -42,13 +42,13 @@ public class Orders {
     @Column(name = "ORDER_DATE", nullable = false)
     @JsonDeserialize(using = DateDeserializers.DateDeserializer.class)
     @JsonSerialize(using = DateSerializer.class)
-    @JsonFormat(pattern = "dd.MM.yyyy hh:mm:ss")
+    @JsonFormat(pattern = "dd.MM.yyyy hh:mm")
     private Date orderDate;
 
     @Column(name = "COMPLETE_DATE", nullable = false)
     @JsonDeserialize(using = DateDeserializers.DateDeserializer.class)
     @JsonSerialize(using = DateSerializer.class)
-    @JsonFormat(pattern = "dd.MM.yyyy hh:mm:ss")
+    @JsonFormat(pattern = "dd.MM.yyyy hh:mm")
     private Date completeDate;
 
     @Column(name = "COMPLETE")

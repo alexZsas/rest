@@ -1,8 +1,7 @@
 package com.hornsandhooves.entity;
 
 import com.fasterxml.jackson.annotation.*;
-import lombok.Data;
-import lombok.EqualsAndHashCode;
+import lombok.*;
 
 import javax.persistence.*;
 import java.util.ArrayList;
@@ -15,6 +14,8 @@ import java.util.List;
 @Table(name = "FURNITURE")
 @Data
 @EqualsAndHashCode(exclude = {"department", "orders"})
+@NoArgsConstructor
+@RequiredArgsConstructor
 @JsonIgnoreProperties(ignoreUnknown = true)
 public class Furniture {
     @Id
@@ -23,6 +24,7 @@ public class Furniture {
     private Long id;
 
     @Column(name = "NAME", nullable = false)
+    @NonNull
     private String name;
 
     @Column(name = "DESCRIPTION")

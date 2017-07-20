@@ -4,22 +4,21 @@ import com.hornsandhooves.entity.Department;
 import com.hornsandhooves.entity.Employee;
 import com.hornsandhooves.entity.Furniture;
 import com.hornsandhooves.entity.Orders;
-import com.hornsandhooves.repository.DepartmentRepository;
 import com.hornsandhooves.repository.EmployeeRepository;
 import com.hornsandhooves.repository.FurnitureRepository;
 import com.hornsandhooves.repository.OrderRepository;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.rest.webmvc.BasePathAwareController;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.Date;
-import java.util.List;
 
 
 /**
  * Created by apriseko on 20.07.2017.
  */
 @RestController
-@RequestMapping("/api")
+@BasePathAwareController
 public class OrderController {
     @Autowired
     private OrderRepository ordersRepository;
