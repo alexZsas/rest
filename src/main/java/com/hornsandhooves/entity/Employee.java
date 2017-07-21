@@ -42,4 +42,11 @@ public class Employee {
     @OneToMany(mappedBy = "employee")
     @JsonIgnore
     private List<Orders> orders = new ArrayList<>();
+
+    public Employee(String firstName, String middleName, String lastName, Department department) {
+        this.firstName = firstName;
+        this.middleName = middleName;
+        this.lastName = lastName;
+        this.department = department;
+    }
 }
